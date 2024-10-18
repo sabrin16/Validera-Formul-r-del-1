@@ -64,6 +64,9 @@ body{
   border: 1p, solid #c3c3c3;
 }
 
+.input-group:has(input:required) label::after {
+ content: ' *'
+}
 
 .invalid-input {
   color: firebrick;
@@ -79,4 +82,9 @@ body{
     display: block;
   }
 
+}
+
+.tip {
+  color: #646464;
+  font-size: .8rem;
 }

@@ -11,33 +11,42 @@
     
    <div class="container">
 
-    <form id="regform" class="reg-form space-y-1">
+    <form id="regform" class="reg-form space-y-1" novalidate>
       
       <div class="input-group">
         <label for="firstName" class="form-label">first Name</label>
-        <input type="text" id="firstName" class="form-input">
-        <p class="invalid-input">First Name is required</p>
-      </div>
-
-      <div class="input-group">
-        <label for="middleName" class="form-label">middle Name</linput>
-        <input type="text" id="middleName" class="form-input">
-        <p class="invalid-input">Middle Name is required</p>
-
+        <input type="text" id="firstName" class="form-input" required>
+        <p class="invalid-input">Error Msg</p>
       </div>
 
       <div class="input-group">
         <label for="lastName" class="form-label">last Name</label>
         <input type="text" id="lastName" class="form-input">
-        <p class="invalid-input">Last Name is required</p>
-
+        <p class="invalid-input">Error Msg</p>
       </div>
 
       <div class="input-group">
-        <label for="address" class="form-label">address</label>
-        <input type="text" id="address" class="form-input">
-        <p class="invalid-input">Address is required</p>
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-input" required/>
+        <p class="invalid-input">Error Msg</p>
+      </div>
 
+      <div class="input-group">
+        <label for="password" class="form-label">password</label>
+        <input type="password" id="password" class="form-input" required>
+        <small class="tip">Must be atleast 5 characters long and contain 1 number</small>
+        <p class="invalid-input">Error Msg</p>
+      </div>
+      <div class="input-group">
+        <label for="repeat-password" class="form-label">Repeat Password</label>
+        <input type="password" id="repeat-password" class="form-input" required>
+        <p class="invalid-input">Error Msg</p>
+      </div>
+
+      <div class="input-group">
+        <input type="checkbox" id="terms" class="form-check" required>
+        <label for="terms" class="">I accept the terms</label>
+        <p class="invalid-input">Error Msg</p>
       </div>
 
       <button id="submit-btn" type="submit" class="btn">register</button>
